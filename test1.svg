@@ -9,8 +9,8 @@
       
       <div class="lab-card">
         <h2>base64 encoder idk</h2>
-        <div id="output">Result will appear here...</div>
-        <input type="text" id="tool-input" placeholder="Enter data..." />
+        <div id="output">here is encoded</div>
+        <input type="text" id="tool-input" placeholder="Enter what u wanna encode" />
         <button onclick="runTool()">encode</button>
       </div>
     </div>
