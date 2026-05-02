@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" id="app-root">
+      <style>
+        #app-root { font-family: sans-serif; background: #111; color: #eee; height: 100vh; padding: 20px; }
+        .lab-card { background: #222; padding: 20px; border-radius: 8px; border: 1px solid #444; }
+        input { width: 100%; background: #333; color: #fff; border: 1px solid #555; padding: 10px; margin: 10px 0; }
+      </style>
+      
+      <div class="lab-card">
+        <h2>base64 encoder idk</h2>
+        <div id="output">here is encoded</div>
+        <input type="text" id="tool-input" placeholder="Enter what u wanna encode" />
+        <button onclick="runTool()">encode</button>
+      </div>
+    </div>
+  </foreignObject>
+
+  <script><![CDATA[
+    // Force XHTML namespace for dynamic elements
+    (function() {
+      const ns = "http://www.w3.org/1999/xhtml";
+      const b = document.getElementById("app-root");
+      
+      window.runTool = function() {
+        const input = document.getElementById('tool-input').value;
+        const out = document.getElementById('output');
+        
+        // Example logic: Base64 Encoder
+        try {
+            out.innerText = "Encoded: " + btoa(input);
+            out.style.color = "#0f0";
+        } catch(e) {
+            out.innerText = "Error: Invalid Input";
+            out.style.color = "#f00";
+        }
+      };
+    })();
+  ]]></script>
+</svg>
